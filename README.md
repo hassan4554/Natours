@@ -13,7 +13,7 @@ Check out the live demo of **Natours**: [Natours Website](natours-ten-nu.vercel.
 
 ## 💻 Technologies Used
 - **HTML5**: For the structure and layout of the website.
-- **CSS3**: Used to style the components and ensure responsiveness.
+- **SCSS**: Used to style the components and ensure responsiveness.
 
 ## 🛠️ Getting Started
 
