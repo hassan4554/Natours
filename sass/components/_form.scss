@@ -1,0 +1,102 @@
+.form {
+    width: 50%;
+
+    @include respond(tab-port){
+        width:100%;
+    }
+    &__group {
+
+        &--input {
+            border: none;
+            width: 75%;
+            margin: 1rem;
+            padding: 1rem;
+            border-radius: 3px;
+            background-color: rgba($color-white,0.3);
+
+            &:focus {
+                outline: none;
+                border-bottom: 3px solid $medium-green;
+            }
+
+            &:focus:invalid{
+                outline: none;
+                border-bottom:3px solid $color-orange-dark;
+            }
+        }
+
+        &-label-1 {
+            display: block;
+            font-size: 1.5rem;
+            margin-left: 1rem;
+            color: $color-dark-grey;
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(1.2rem) translateY(-6.6rem);
+            transition: all 0.3s;
+        }
+
+        &--input:placeholder-shown+&-label-1 {
+            transform: translateX(1.2rem) translateY(-4rem);
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        &-label-2 {
+            font: inherit;
+            font-size: 1.7rem;
+            font-weight: 500;
+            padding: 1rem;
+            color: $color-dark-grey;
+            position: relative;
+
+            &:hover{
+                cursor:pointer;
+            }
+        
+            &:not(:last-child) {
+                margin-left: 3rem;
+                margin-right: 4.5rem;
+            }
+        }
+
+
+        &-radio-btn {
+            width: max-content;
+            display: none;
+        }
+
+
+    }
+}
+
+.label-check {
+    height: 2.7rem;
+    width: 2.7rem;
+    border: 5px solid $medium-green;
+    border-radius: 50%;
+    background-color: transparent;
+    display: inline-block;
+    position: absolute;
+    top: 0.7rem;
+    left: -2rem;
+    z-index:0;
+
+    &::after {
+        content: "";
+        height: 1.2rem;
+        width: 1.2rem;
+        display: inline-block;
+        border-radius: 50%;
+        background-color: $medium-green;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(23%, 25%);
+        opacity: 0;
+    }
+}
+
+.form__group-radio-btn:checked + .form__group-label-2>.label-check::after {
+    opacity: 1;
+}

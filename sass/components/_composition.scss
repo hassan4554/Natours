@@ -1,0 +1,54 @@
+.composition {
+    position: relative;
+    // height:50vh;
+
+    &__photo {
+        width: 55%;
+        position: absolute;
+        transition: all 0.3s;
+        z-index: 10;
+        outline-offset: 1rem ;
+        margin: 0;
+        padding: 0;
+
+        &-p1 {
+            // top: -3.5%;
+            top:-1.5rem;
+            left: 0;
+
+            @include respond(phone){
+                top:-3rem;
+            }
+        }
+
+        &-p2 {
+            // top: 7%;
+            top:2.6rem;
+            left: 46%;
+            @include respond(phone){
+                top:0;
+            }
+        }
+
+        &-p3 {
+            // top: 43%;
+            top:13rem;
+            left: 4%;
+
+            @include respond(phone){
+                top:5.5rem;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+            outline:1rem solid $dark-green;
+            z-index: 20;
+            transform: scale(1.05) translateY(-0.5rem);
+        }
+    }
+
+    &:hover &__photo:not(:hover) {
+        transform: scale(0.95);
+    }
+}

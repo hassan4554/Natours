@@ -1,0 +1,192 @@
+.card {
+    perspective: 150rem;
+    position: relative;
+    height: 40rem;
+
+    &__front {
+        @include card-style(0deg, 30);
+        background-color: $color-white;
+    }
+
+    &__back {
+        @include card-style(180deg, 10);
+
+        &-1 {
+            background: linear-gradient(to right bottom, $color-orange-light, $color-orange-dark);
+        }
+
+        &-2 {
+            background: linear-gradient(to right bottom, $light-green, $dark-green);
+        }
+
+        &-3 {
+            background: linear-gradient(to right bottom, $color-purple-light, $color-purple-dark);
+        }
+    }
+
+
+    &:hover &__front {
+        transform: rotateY(180deg);
+    }
+
+    &:hover &__back {
+        transform: rotateY(360deg);
+        backface-visibility: visible;
+    }
+
+
+    &-center {
+        margin-top: 10rem;
+
+
+        &-price {
+            font-size: 6rem;
+            color: $color-white;
+            font-weight: lighter;
+        }
+    }
+
+
+    &__img {
+        background-size: cover;
+        height: 23rem;
+        background-blend-mode: color;
+        -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 87%, 0 99%, 0 0);
+        clip-path: polygon(50% 0%, 100% 0, 100% 87%, 0 99%, 0 0);
+        border-top-left-radius: 0.3rem;
+        border-top-right-radius: 0.3rem;
+
+        &-1 {
+            background-image: linear-gradient(to right bottom, $color-orange-light, $color-orange-dark),
+                url("../images/nat-5.jpg");
+        }
+
+        &-2 {
+            background-image: linear-gradient(to right bottom, $light-green, $dark-green),
+                url("../images/nat-6.jpg");
+        }
+
+        &-3 {
+            background-image: linear-gradient(to right bottom, $color-purple-light, $color-purple-dark),
+                url("../images/nat-7.jpg");
+        }
+    }
+
+    &__heading {
+        font-size: 2.5rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        text-align: right;
+        color: $color-white;
+        position: absolute;
+        top: 39%;
+        right: 4.5%;
+        width: 75%;
+    }
+
+    &__heading-span {
+        padding: 0 1rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+
+        &--1 {
+            background: linear-gradient(to right bottom,
+                    rgba($color-orange-light, 0.85),
+                    rgba($color-orange-dark, 0.85));
+        }
+
+        &--2 {
+            background: linear-gradient(to right bottom,
+                    rgba($light-green, 0.85),
+                    rgba($dark-green, 0.85));
+        }
+
+        &--3 {
+            background: linear-gradient(to right bottom,
+                    rgba($color-purple-light, 0.85),
+                    rgba($color-purple-dark, 0.85));
+        }
+    }
+
+    &__details {
+
+        & ul {
+            padding: 0 5rem;
+
+            & li {
+                list-style: none;
+                text-align: center;
+                color: $color-dark-grey;
+                font-size: 1.2rem;
+
+                &:not(:last-child) {
+                    margin-bottom: 1rem;
+                    padding-bottom: 7px;
+                    border-bottom: 1.5px solid #eee;
+                }
+            }
+        }
+    }
+}
+
+
+
+@include respond(tab-port) {
+    .card {
+        position: relative;
+        height: 40rem;
+        margin-bottom: 30rem;
+        background-color: $color-white;
+
+        &__back {
+            @include card-style(0deg, 10);
+            top: 32rem;
+            clip-path: polygon(0 30%, 100% 20%, 100% 100%, 0% 100%);
+        }
+
+        &:hover &__front {
+            transform: rotateY(0deg);
+        }
+
+        &:hover &__back {
+            transform: rotateY(0deg);
+            backface-visibility: visible;
+        }
+
+
+        &-center {
+            margin-top: 10rem;
+
+
+            &-price {
+                font-size: 6rem;
+                color: $color-white;
+                font-weight: lighter;
+            }
+        }
+
+        &__details {
+
+            & ul {
+                padding: 0 5rem;
+                // margin-bottom:10rem;
+                & li {
+                    list-style: none;
+                    text-align: center;
+                    color: $color-dark-grey;
+                    font-size: 1.2rem;
+    
+                    &:not(:last-child) {
+                        margin-bottom: 1rem;
+                        padding-bottom: 7px;
+                        border-bottom: 1.5px solid #eee;
+                    }
+
+                    // &:last-child{
+                    //     margin-bottom: 5rem;
+                    // }
+                }
+            }
+        }
+    }
+}

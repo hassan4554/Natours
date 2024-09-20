@@ -1,0 +1,112 @@
+.btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    position: relative;
+    text-transform: uppercase;
+    
+    &--white {
+        border-radius: 10rem;
+        color: $color-dark-grey;
+        background-color: $color-white;
+    }
+    
+    &--animated {
+        animation: moveinBottom 1s ease-out 0.75s;
+        animation-fill-mode: backwards;
+        &::after {
+            content: "";
+            height: 100%;
+            width: 100%;
+            border-radius: 10rem;
+            display: block;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            z-index: -1;
+            background: $color-blue-light;
+            opacity: 0;
+            transition: all 0.5s;
+            animation: button-btn 1.5s linear infinite;
+            animation-delay: 2s;
+        
+        }
+    }
+    
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+        &::after {
+            animation: none;
+        }
+    }
+    
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    }
+    
+}
+
+
+.btn-green{
+
+    border: none;
+    border-bottom: 0.2rem solid $medium-green;
+    color: $medium-green;
+    font-size: 1.5rem;
+    padding: 0.3rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s;
+
+    &:hover{
+        background-color: $medium-green;
+        color:$color-white;
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+        transform: translateY(-0.5rem);
+    }
+
+    &:active{
+        box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+        transform: translate(0);   
+    }
+}
+
+.btn-container{
+    text-align: center;
+
+    &__green{
+        background-color: $medium-green;
+        color:$color-white;
+        border-radius: 10rem;
+        border:none;
+    }
+}
+
+.btn-submit{
+    width:75%;
+    margin:1rem;
+    padding:1rem;
+    border-radius: 3px;
+    border:none;
+    text-transform: uppercase;
+    color:$color-dark-grey;
+    background-color:rgba($color-white,0.3) ;
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.5);
+    transition: all 0.3s;
+
+    &:hover{
+        background: linear-gradient(to right, $light-green,$dark-green);
+        transform: translateY(-0.4rem);
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.5);
+        cursor: pointer;
+        outline:none;
+        // animation: btn-background 0.4s ease-in;
+    }
+
+    &:active{
+        transform: translate(0);
+    }
+}

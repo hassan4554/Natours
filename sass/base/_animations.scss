@@ -1,0 +1,81 @@
+@keyframes moveinLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveinRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveinBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes button-btn {
+    0% {
+        opacity: 0;
+        transform: scaleX(1) scaleY(1);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+    }
+}
+
+// @keyframes btn-background {    
+//     0%{
+//         background: linear-gradient(to right, rgba($light-green,0) 0%,rgba($dark-green,0) 100%);
+//     }
+
+//     25%{
+//         background: linear-gradient(to right, rgba($light-green,0.25)25%,rgba($dark-green,0.25)75%);
+//     }
+
+//     50%{
+//         background: linear-gradient(to right, rgba($light-green,0.5) 50%,rgba($dark-green,0.5) 50%);
+//     }
+
+//     75%{
+//         background: linear-gradient(to right, rgba($light-green,0.75) 75%,rgba($dark-green,0.75) 25%);
+//     }
+
+//     100%{
+//         background: linear-gradient(to right, rgba($light-green,1) 100%,rgba($dark-green,1) 0%);
+//     }
+// }

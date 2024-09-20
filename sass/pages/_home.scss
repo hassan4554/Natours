@@ -1,0 +1,72 @@
+.about {
+    margin-top: -10%;
+    padding: 20rem 0;
+    background-color: $color-grey-light;
+
+    @include respond(tab-port){
+        padding: 20rem 0 50rem 0;
+        margin-top: -20%;
+    }
+
+    @include respond(phone){
+        padding: 17rem 0 30rem 0;
+        margin-top: -20%;
+    }
+}
+
+.features {
+    margin-top: -7rem;
+    padding: 15rem 0;
+    background-image: linear-gradient(to right bottom, rgba($light-green, 0.8), rgba($dark-green, 0.8)), url("../images/nat-4.jpg");
+    background-size: cover;
+    background-position: top;
+
+    transform: skewY(-6deg);
+
+    &>* {
+        transform: skewY(6deg);
+    }
+}
+
+
+.tours {
+    margin-top: -5%;
+    background-color: $color-grey-light;
+    padding: 15rem 0;
+}
+
+.stories {
+    position: relative;
+    padding: 5rem 0;
+}
+
+.booking {
+    padding: 10rem 0;
+    background: linear-gradient(to right bottom, $light-green, $dark-green);
+}
+
+.book {
+    font-size: 1rem;
+    border-radius: 3px;
+    padding-bottom:7rem; 
+    background-image: linear-gradient(105deg,
+            rgba($color-white, 0.7) 50%,
+            rgba($color-transparent, 0) 50%),
+        url("../images/nat-10.jpg");
+    background-size: cover;
+
+    @include respond(tab-port){
+        background-image: linear-gradient(105deg,
+            rgba($color-white, 0.7) 100%,
+            rgba($color-transparent, 0) 0%),
+        url("../images/nat-10.jpg");
+    }
+}
+
+.star{
+    background-color:$color-dark-grey;
+    width:20rem;
+    height:20rem;
+    margin:10rem;
+    clip-path: polygon(20%,20%, 0 0, 0 0, 0 0);
+}

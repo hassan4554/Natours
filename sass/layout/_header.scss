@@ -1,0 +1,58 @@
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom, rgba($light-green,0.8), rgba($dark-green,0.8)), url("../images/hero.jpg");
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 85%, 0 99%, 0 0);
+    clip-path: polygon(50% 0%, 100% 0, 100% 85%, 0 99%, 0 0);
+    // clip-path: polygon(0 50%,25% 50%, 50% 0%, 75% 50% ,100% 50%,75% 60%, 75% 100%,50% 50%,25% 100%,25% 60%);
+    // clip-path: polygon(0% 30%,60% 30%, 60% 0%, 100% 50%, 60% 100%, 60% 70%, 0% 70%, 0% 30%);
+
+    @include respond(phone){
+        -weblit-clip-path: polygon(50% 0%, 100% 0, 100% 93%, 0 99%, 0 0);
+        clip-path: polygon(50% 0%, 100% 0, 100% 93%, 0 99%, 0 0);
+    }
+
+    &__logo-box {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+
+        @include respond(phone){
+            top:3rem;
+            left:3rem;
+        }
+    }
+    
+    &__logo {
+        height: 4rem;
+    }
+    
+    &__text-box {
+        text-transform: uppercase;
+        color: $color-white;
+        font-weight: 700;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        line-height: 1.7;
+        backface-visibility: hidden;
+    }
+    
+    &__main-H {
+        display: block;
+        font-size: 4rem;
+        letter-spacing: 1.3rem;
+        animation: moveinLeft 1s ease-out;
+    }
+    
+    &__sub-H {
+        display: block;
+        letter-spacing: 1rem;
+        margin-bottom: 3rem;
+        animation: moveinRight 1s ease-out;
+    }
+}
