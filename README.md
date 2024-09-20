@@ -3,7 +3,7 @@
 Welcome to **Natours**, a static website designed for people who love to travel and explore the beauty of nature. 🌳✨ This project was created as a practice exercise to enhance web development skills and showcase a beautiful, user-friendly interface for nature enthusiasts.
 
 ## 🚀 Live Demo
-Check out the live demo of **Natours**: [Natours Website](natours-ten-nu.vercel.app/)
+Check out the live demo of **Natours**: [Natours Website](natours-ten-nu.vercel.app)
 
 ## 🎯 Features
 - **Stunning design** 🌟: A beautiful and minimalist layout that highlights the best of nature.
